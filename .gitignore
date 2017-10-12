@@ -1,3 +1,2 @@
-# Ignore docs files
-styles/.sass-cache
-styles/.sass-cache/*
+.sass-cache/
+*.css.map
