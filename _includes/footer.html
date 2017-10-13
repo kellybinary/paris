@@ -1,10 +1,28 @@
 <!-- Footer -->
 <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-3 align-self-start">
-      <img src= {{ "/img/FS_logo_white.svg" | prepend: site.github.url | replace: 'http://', 'https://' }} alt="">
+        <div class="row">
+          <div class="col-lg-4 mx-auto">
+              <div class="row" align="center">
+                <div class="col-12 footer-brand mt-3">
+                    <a class="footer-logo" href={{ "/" | prepend: site.github.url | replace: 'http://', 'https://' }}><img src= {{ "/img/icons/logo.svg" | prepend: site.github.url | replace: 'http://', '//' }} alt=""></a>
+                </div>
+              </div>
+              <div class="row footer-links mb-3" align="center">
+                  <div class="col-4">
+                      <a href="#">What we</a>
+                  </div>
+                  <div class="col-4">
+                      <a href="#">Our Team</a>
+                  </div>
+                  <div class="col-4">
+                      <a href="#">Job</a>
+                  </div>
+              </div>
+          </div>
+        </div>
     </div>
-      </div>
+    <div class="goTop" id="goTop">
+      <p>Go</p><p>Up</p>
     </div>
 </footer>

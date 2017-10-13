@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1,
@@ -14,12 +14,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-  color: $primary_color;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $black;
 
   &.reverse_color {
+    color: $orange;
+  }
+  &.white_color {
     color: $white;
+  }
+  &.text_align_left {
+    text-align: left;
   }
 }
 
@@ -33,6 +39,26 @@ h2 {
   font-size: 2.2rem;
   line-height: 3rem;
   margin: 10px 0 20px;
+  &.line_styling {
+      span {
+          background: $white;
+          padding: 0 30px;
+          position: relative;
+          z-index: 1;
+      }
+      position: relative;
+      text-align: center;
+      &:before {
+          background: $orange;
+          content: "";
+          display: block;
+          height: 2px;
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          left: 0;
+      }
+  }
 }
 
 h3 {
@@ -43,12 +69,14 @@ h3 {
 
 h4 {
   font-size: 1rem;
+  font-weight: 400;
   line-height: 20px;
 }
 
 p {
-  font-size: 1rem;
-  line-height: normal;
+  font-size: 18px;
+  line-height: 1.4em;
+  font-weight: 300;
   color: $black;
   &.reverse_color{
     color: $white;
@@ -56,13 +84,13 @@ p {
 }
 
 a {
-  color: $secondary_color;
-  font-weight: 700;
+  color: $brand_blue;
+  font-weight: 400;
   &:hover{
-    color: $secondary_color_hover;
+    color: $orange;
   }
   &[href^="mailto"]{
-    color: $primary_color;
+    color: $brand_blue;
   }
 }
 
@@ -87,35 +115,48 @@ a {
   }
 }
 
+.top-navbar {
+    background-image: url('img/home.png');
+    background-size: cover;
+}
+
 .navbar {
   padding: 0;
+  background-color: transparent;
 
   .nav-item {
     padding: 0.5rem 0.3rem;
 
     &:hover, &.active {
-      color: $white;
-      background-color: $primary_color;
 
       a.nav-link {
-        color: $white;
+        color: $orange;
       }
     }
   }
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: $primary_color;
-  font-weight: 700;
+  color: $white;
+  font-weight: 400;
 
   &:hover {
-    color: $white;
+      color: $orange;
   }
+}
+
+.nav-link {
+    display: block;
+    padding: 0rem 1rem;
+}
+
+.nav-item.active a.nav-link {
+    border-bottom: 2px solid $orange;
 }
 
 .navbar-brand {
   img {
-    width: 200px;
+    width: 50px;
   }
 }
 /* setting for header image or any section with background image in all pages*/
@@ -123,14 +164,9 @@ a {
   width: 100%;
   // height: 100%;
   text-align: center;
-  margin-bottom: 1rem;
   .align-items-center{
     height: 100%;
     padding: 1.5rem 0;
-  }
-  &.home {
-    background: url("img/header_home.jpg") no-repeat;
-    background-size: cover;
   }
   &.careers{
     background: url("img/header_career.jpg") no-repeat;
@@ -159,15 +195,56 @@ a {
   position: relative;
   padding-top: 5%;
   padding-bottom: 5%;
-
-  .btn {
-    margin-top: 5%;
-  }
+  align-items: center;
+  display: flex;
 }
 
 .intro-message > h1 {}
 
 .intro-message > h3 {}
+
+.home-disclaimer {
+    p {
+        color: $white;
+        font-size: 14px;
+        padding: 30px 20px 10px;
+        text-align: center;
+    }
+    background-color: $brand_blue;
+    border-bottom: 3px solid $orange;
+}
+
+h4.banner-message {
+    padding: 0px 20px;
+    text-align: justify;
+    line-height: 1.4em;
+    color: $white;
+    font-weight: 300;
+}
+
+.ico-img {
+    max-height:35px;
+}
+
+.intro-bottom-bg {
+    background-image: url('img/about_team_bg.png');
+    background-size: cover;
+    margin-bottom: 4.5rem;
+    img {
+        position: absolute;
+        max-width: 100%;
+        height: 110%;
+        top: -5%;
+        box-shadow: 1px 1px 6px 1px $black;
+    }
+    .intro-team-section {
+      padding: 7rem 4rem;
+      p {
+          font-size: 14px;
+          text-align: justify;
+      }
+    }
+}
 
 hr {
    border-top: 2px solid $light_gray;
@@ -270,38 +347,14 @@ ul {
 
 /*Home page*/
 #home{
-  .layout-image {
-    max-width:60%;
-  }
-  .layout-text {
-  color: $white;
-  max-width:40%;
-  background-color:$primary_color;
-  display:inline-block;
-  position:absolute;
-  &.right{right:3rem;}
-  &.left{left:3rem;}
-  .content{
-    padding: 2rem 2rem 0;
-    .arrow{
-      max-width: 20px;
-      margin-left: 10px;
+    max-width: 960px;
+    p {
+        font-size: 14px;
+        padding: 0px 60px;
     }
-  }
-  }
-  .triangle-bottomright {
-	width: 0;
-	height: 0;
-	border-bottom: 50px solid  $white;
-	border-left: 50px solid transparent;
-  float: right;
 }
-.triangle-bottomleft {
-	width: 0;
-	height: 0;
-	border-bottom: 50px solid $white;
-	border-right: 50px solid transparent;
-}
+.bottom-row {
+    margin-bottom: 3rem;
 }
 /* About us page*/
 #about {
@@ -376,10 +429,72 @@ padding: 1rem 0;
 footer {
   margin-top: 2rem;
   padding: 0.6rem 0;
-  background-color: $primary_color;
+  background-color: $light_gray;
   img{
     width: 100px;
   }
+  .footer-brand {
+      padding: 20px 0px 10px;
+      .footer-logo{
+          img {
+            width: 50px;
+          }
+      }
+  }
+  .footer-links {
+      padding: 20px;
+  }
+  .goTop {
+      display: none;
+      background-color: $brand_blue;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 15px 10px 15px;
+      p {
+        color: $white;
+        font-size:14px;
+        vertical-align: middle;
+        font-weight: 300;
+        line-height: 0;
+      }
+  }
+}
+
+@media (max-width: 991px) {
+  .intro-bottom-bg {
+      .intro-team-section {
+        padding: 6rem 2rem;
+      }
+  }
+
+}
+
+@media (max-width: 767px) {
+  #home p {
+      padding: 0px 15px;
+  }
+
+  .intro-bottom-bg {
+      margin-bottom: 2.5rem;
+      img {
+          position: relative;
+          height: unset;
+          top: unset;
+      }
+      .intro-team-section {
+        padding: 1rem 2rem;
+      }
+  }
+  .bottom-row {
+      margin-top: 3rem;
+      margin-bottom: unset;
+  }
+
 }
 /* Media ueries */
 @media (max-width: 575px) {
