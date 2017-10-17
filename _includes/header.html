@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<div id="top" class="container-fluid top-navbar">
+<div id="top" class="container-fluid {{ page.background }}">
 
   <nav class="navbar navbar-expand-sm navbar-light bg-faded">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,7 @@
           <a class="nav-link" href={{ "#" | prepend: site.github.url | replace: 'http://', 'https://' }}>Our Team</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href={{ "#" | prepend: site.github.url | replace: 'http://', 'https://' }}>Job</a>
+          <a class="nav-link" href={{ "/jobs" | prepend: site.github.url | replace: 'http://', 'https://' }}>Jobs</a>
         </li>
       </ul>
     </div>

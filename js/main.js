@@ -1,5 +1,7 @@
 $(function() {
     setActiveMenu();
+    $('.jobs-div').hide();
+    $('#quantitative-developer').show();
 });
 
 function setActiveMenu() {
@@ -18,4 +20,13 @@ $(window).scroll(function() {
     } else {
         $('#goTop').stop(true, true).fadeOut();
     }
+});
+
+$('.job-select li').click(function(e) {
+    e.preventDefault()
+    $that = $(this);
+    $that.parent().find('li').removeClass('active');
+    $that.addClass('active');
+    $('.jobs-div').hide();
+    $('#quantitative-'+$(this).attr('target')).show();
 });

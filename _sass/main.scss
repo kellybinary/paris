@@ -73,6 +73,10 @@ h4 {
   line-height: 20px;
 }
 
+strong {
+    font-weight: 700;
+}
+
 p {
   font-size: 18px;
   line-height: 1.4em;
@@ -84,39 +88,47 @@ p {
 }
 
 a {
-  color: $brand_blue;
-  font-weight: 400;
-  &:hover{
-    color: $orange;
-  }
-  &[href^="mailto"]{
     color: $brand_blue;
-  }
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      color: $orange;
+    }
+    &[href^="mailto"] {
+      color: $brand_blue;
+    }
+    &:visited {
+      color: $brand_blue;
+    }
 }
 
-.btn {
-  border: none;
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: bold;
-  border-radius: 1rem;
-  padding: 0.8rem 2.5rem;
+.button {
+    cursor: pointer;
+    margin-bottom: 0.5em;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: $secondary_color;
-
-  &:hover {
-    background-color: $secondary_color_hover;
-  }
-  &:focus{
-    box-shadow: none;
-  }
+.button span {
+    text-decoration: none;
+    text-align: center;
+    line-height: 100%;
+    text-transform: capitalize;
+    padding: 10px 25px;
+    display: inline-block;
+    font-weight: 400;
+    font-family: inherit;
+    border-radius: 3px;
+    overflow: visible;
+    border: 0;
+    color: #FFF;
+    background: #2E8836;
 }
 
-.top-navbar {
+.home-bg {
     background-image: url('img/home.png');
+    background-size: cover;
+}
+.jobs-bg {
+    background-image: url('img/jobs.png');
     background-size: cover;
 }
 
@@ -159,6 +171,34 @@ a {
     width: 50px;
   }
 }
+
+.list-group .list-group-item {
+    border-radius: 0;
+    background-color: $light_gray;
+    color: $black;
+    cursor: pointer;
+    font-size: 14px;
+    font-style: oblique;
+
+    &.active {
+        background-color: $brand_blue;
+        border-color: $brand_blue;
+        color: $white;
+    }
+}
+
+ul.bullet {
+    margin: 1.25em 0 1.25em 1.25em;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        line-height: 1.4em;
+        margin: .5em 0 0;
+        list-style-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='18px' height='18px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath fill='%23e98024' d='M12,17.5A5.5,5.5,0,1,1,17.5,12,5.507,5.507,0,0,1,12,17.5Zm0-9A3.5,3.5,0,1,0,15.5,12,3.5,3.5,0,0,0,12,8.5Z'/%3E%3C/svg%3E");
+    }
+}
+
 /* setting for header image or any section with background image in all pages*/
 .intro-header {
   width: 100%;
@@ -168,7 +208,8 @@ a {
     height: 100%;
     padding: 1.5rem 0;
   }
-  &.careers{
+  &.jobs{
+      padding: 60px 0px 80px;
   }
   &.about{
   }
@@ -353,6 +394,31 @@ ul {
     max-width: 4rem;
     margin: 1rem;
   }
+}
+#jobs {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+
+    #quantitative-developer, #quantitative-analyst {
+        padding: 0px 30px;
+        display: none;
+    }
+    h4 {
+        text-align: left;
+        font-weight: 400;
+    }
+    hr {
+        max-width: 100%;
+    }
+    .jobs-desc-container {
+        p {
+            font-size: 14px;
+        }
+        ul.bullet li span{
+            font-size: 14px;
+        }
+    }
+
 }
 /*Contact us page*/
 #contact {
