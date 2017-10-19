@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2640 2024 64 54.154">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #2a3052;
-      }
-    </style>
-  </defs>
-  <g id="noun_944880_cc" transform="translate(2634 2014)">
-    <g id="Group_3" data-name="Group 3" transform="translate(6 10)">
-      <path id="Path_2612" data-name="Path 2612" class="cls-1" d="M69.649,60.426,40.111,11.2a2.462,2.462,0,0,0-4.222,0L6.351,60.426a2.462,2.462,0,0,0,2.111,3.728H67.538a2.462,2.462,0,0,0,2.111-3.728Zm-29.188-8.58a2.462,2.462,0,0,1-4.923,0V49.384a2.462,2.462,0,1,1,4.923,0Zm0-9.846a2.462,2.462,0,1,1-4.923,0V29.692a2.462,2.462,0,0,1,4.923,0Z" transform="translate(-6 -10)"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2640 2024 64 54.154"><defs><style>.cls-1{fill:#2a3052}</style></defs><g id="noun_944880_cc" transform="translate(2634 2014)"><g id="Group_3" data-name="Group 3" transform="translate(6 10)"><path id="Path_2612" data-name="Path 2612" class="cls-1" d="M69.649 60.426L40.111 11.2a2.462 2.462 0 0 0-4.222 0L6.351 60.426a2.462 2.462 0 0 0 2.111 3.728h59.076a2.462 2.462 0 0 0 2.111-3.728zm-29.188-8.58a2.462 2.462 0 0 1-4.923 0v-2.462a2.462 2.462 0 1 1 4.923 0zm0-9.846a2.462 2.462 0 1 1-4.923 0V29.692a2.462 2.462 0 0 1 4.923 0z" transform="translate(-6 -10)"/></g></g></svg>
