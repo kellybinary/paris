@@ -30,3 +30,11 @@ $('.job-select li').click(function(e) {
     $('.jobs-div').hide();
     $('#quantitative-'+$(this).attr('target')).show();
 });
+
+$('.page-scroll').click(function(e) {
+    e.preventDefault();
+    var target = e.target.getAttribute('href').substr(1);
+    $('html, body').animate({
+        scrollTop: $(`#${target}`).offset().top
+    }, 500);
+});
