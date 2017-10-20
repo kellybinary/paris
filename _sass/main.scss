@@ -6,6 +6,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 h1,
@@ -14,9 +15,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: $black;
+  line-height: 1.2;
 
   &.reverse_color {
     color: $orange;
@@ -31,13 +32,11 @@ h6 {
 
 h1 {
   font-size: 3rem;
-  line-height: 3.8rem;
   margin: 10px 0 30px;
 }
 
 h2 {
-  font-size: 2.2rem;
-  line-height: 3rem;
+  font-size: 2.75rem;
   margin: 10px 0 20px;
   &.line_styling {
       span {
@@ -63,14 +62,12 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  line-height: 28px;
   margin: 10px 0 20px;
 }
 
 h4 {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 20px;
 }
 
 strong {
@@ -79,7 +76,7 @@ strong {
 
 p {
   font-size: 18px;
-  line-height: 1.4em;
+  line-height: 1.5;
   font-weight: 300;
   color: $black;
   &.reverse_color{
@@ -138,6 +135,7 @@ a {
   background-color: transparent;
 
   .nav-item {
+    font-size: 18px;
     padding: 0.5rem 0.3rem;
 
     &:hover, &.active {
@@ -162,7 +160,7 @@ a {
   color: $white;
   font-weight: 400;
 
-  &:hover {
+  &:hover, &:focus {
       color: $orange;
   }
 }
@@ -188,8 +186,7 @@ a {
     background-color: $light_gray;
     color: $black;
     cursor: pointer;
-    font-size: 14px;
-    font-style: oblique;
+    font-size: 1rem;
 
     &.active {
         background-color: $brand_blue;
@@ -213,7 +210,6 @@ ul.bullet {
 /* setting for header image or any section with background image in all pages*/
 .intro-header {
   width: 100%;
-  // height: 100%;
   text-align: center;
   .align-items-center{
     height: 100%;
@@ -240,14 +236,17 @@ ul.bullet {
   display: flex;
 }
 
-.intro-message > h1 {}
+.intro-message h1 {
+  font-size: 3.75rem;
+  line-height: 1.4;
+}
 
 .intro-message > h3 {}
 
 .home-disclaimer {
     p {
         color: $white;
-        font-size: 14px;
+        font-size: 1.25rem;
         padding: 30px 20px 10px;
         text-align: center;
     }
@@ -257,32 +256,31 @@ ul.bullet {
 
 h4.banner-message {
     padding: 0px 20px;
-    text-align: justify;
-    line-height: 1.4em;
+    text-align: left;
+    line-height: 1.5;
     color: $white;
     font-weight: 300;
+    font-size: 1.85rem;
 }
 
 .ico-img {
-    max-height:35px;
+    max-height: 64px;
 }
 
 .intro-bottom-bg {
     background-image: url('img/about_team_bg.png');
     background-size: cover;
-    margin-bottom: 4.5rem;
+    margin-bottom: 6rem;
+    
     img {
         position: absolute;
-        max-width: 100%;
-        height: 110%;
-        top: -5%;
-        box-shadow: 1px 1px 6px 1px $black;
+        width: 100%;
+        top: -7%;
     }
     .intro-team-section {
-      padding: 7rem 4rem;
+      padding: 6rem 2rem;
       p {
-          font-size: 14px;
-          text-align: justify;
+          font-size: 1.25rem;
       }
     }
 }
@@ -387,11 +385,13 @@ ul {
 }
 
 /*Home page*/
-#home{
-    max-width: 960px;
+#home {
+    max-width: 1200px;
+    h4 {
+      font-size: 1.25rem;
+    }
     p {
-        font-size: 14px;
-        padding: 0px 60px;
+        font-size: 1rem;
     }
 }
 .bottom-row {
@@ -422,11 +422,9 @@ ul {
         max-width: 100%;
     }
     .jobs-desc-container {
-        p {
-            font-size: 14px;
-        }
-        ul.bullet li span{
-            font-size: 14px;
+        p, ul.bullet li span {
+            font-size: 1rem;
+            font-weight: 300;
         }
     }
 
@@ -445,10 +443,10 @@ ul {
   }
 }
 /*Careers*/
-#philosophy{
+#philosophy {
   background-color: $light_gray;
   padding: 2rem;
-  .card-s{
+  .card-s {
     border: 0;
     border-radius: 0;
     box-shadow: .3rem .3rem .1rem $light_gray;
@@ -493,10 +491,8 @@ padding: 1rem 0;
 }
 /*Footer*/
 footer {
-  margin-top: 2rem;
-  padding: 0.6rem 0;
   background-color: $light_gray;
-  img{
+  img {
     width: 100px;
   }
   .footer-brand {
@@ -509,24 +505,31 @@ footer {
   }
   .footer-links {
       padding: 20px;
+      font-size: 18px;
+  }
+  .container {
+    position: relative;
   }
   .goTop {
+      position: absolute;
       display: none;
       background-color: $brand_blue;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
+      top: 0;
+      right: 0;
       z-index: 99;
       border: none;
       outline: none;
       cursor: pointer;
-      padding: 20px 15px 10px 15px;
+      padding: 10px;
+      width: 60px;
+      height: 60px;
       p {
         color: $white;
-        font-size:14px;
+        font-size: 18px;
+        text-align: center;
         vertical-align: middle;
         font-weight: 300;
-        line-height: 0;
+        line-height: 1;
       }
   }
 }
@@ -534,7 +537,7 @@ footer {
 @media (max-width: 991px) {
   .intro-bottom-bg {
       .intro-team-section {
-        padding: 6rem 2rem;
+        padding: 5rem 2rem;
       }
   }
 
